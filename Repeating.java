@@ -10,15 +10,15 @@ public class hu3 {
 	{
 		// TODO Auto-generated method stub
 		Scanner x=new Scanner(System.in);
-		int aa[]=new  int[100];
-		int a[]=new  int[100];
-		int b[]=new  int[100];
+		int aas[]=new  int[1000];
+		int as[]=new  int[1000];
+		int bs[]=new  int[1000];
 		int n=x.nextInt();
 		int i=0,j=0,c=0,p=0,flag=0;
 		boolean contains=false;
 		for(i=0;i<n;i++)
 		{
-			a[i]=x.nextInt();
+			as[i]=x.nextInt();
 		}
        
 		for(i=0;i<n;i++)
@@ -26,9 +26,9 @@ public class hu3 {
 			for(j=i+1;j<n;j++)
 
 		{
-				if(a[i]==a[j])
+				if(as[i]==as[j])
 				{
-				 b[c]=a[i];
+				 bs[c]=as[i];
 				 c++;
 				}
 				}
@@ -37,12 +37,12 @@ public class hu3 {
 		Set<Integer> set = new HashSet<Integer>();
 		for( i=0;i<n;i++)
 	    {
-	    	set.add(a[i]);
+	    	set.add(as[i]);
 	    }
 		System.out.println("\nPrint Set Value via Iterator: ");
 		  Iterator<Integer> itr=set.iterator();  
 		  while(itr.hasNext()){  
-		   aa[p]=(Integer)itr.next();  
+		   aas[p]=(Integer)itr.next();  
 		   p++;
 		  }  
 		  
@@ -50,11 +50,11 @@ public class hu3 {
 		  {
 		  	for(j=0;j<b.length;j++)
 		  	{
-		  		if(aa[i]==b[j])
+		  		if(aas[i]==bs[j])
 		  			flag++;
 		  	}
 		  	if(flag==0)
-		  		System.out.println(aa[i]);
+		  		System.out.println(aas[i]);
 		  	    flag=0;
 		  	    
 		  }
